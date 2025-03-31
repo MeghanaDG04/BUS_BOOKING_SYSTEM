@@ -380,23 +380,6 @@ void cancelTicket(struct Bus buses[], int numBuses, struct Passenger passengers[
 
 
 // Function to view ticket details
-/*void viewTicketDetails(struct Passenger passengers[], int numPassengers) {
-    printf("\nTicket Details:\n");
-    for (int i = 0; i < numPassengers; i++) {
-        printf("Passenger Name: %s\n", passengers[i].name);
-        printf("Passenger Age: %d\n", passengers[i].age);
-        printf("Seat Number: %d\n", passengers[i].seatNumber);
-        printf("Bus Number: %d\n", passengers[i].busNumber);
-        printf("Contact Number: %s\n", passengers[i].contactNumber);
-        printf("Contact Email: %s\n", passengers[i].contactEmail);
-        printf("Starting Point: %s\n", passengers[i].startingPoint);
-        printf("Destination: %s\n", passengers[i].destination);
-        printf("Booking Date & Time: %s\n", passengers[i].bookingDateTime); // Display booking date and time
-        printf("Booked on and at: %s\n", passengers[i].bookedDateTime); // Display booked date and time
-        printf("---------------------------\n");
-    }
-}*/
-
 void viewTicketDetails(struct Passenger passengers[], int numPassengers) {
     printf("\nTicket Details:\n");
     for (int i = 0; i < numPassengers; i++) {
@@ -478,20 +461,6 @@ void writeBusesToFile(struct Bus buses[], int numBuses) {
 }
 
 // Function to read passengers data from file
-/*int readPassengersFromFile(struct Passenger passengers[]) {
-    FILE *file = fopen(PASSENGERS_FILE, "r");
-    if (file == NULL) {
-        return 0; // Return 0 if the file doesn't exist or is empty
-    }
-
-    int numPassengers = 0;
-    while (fscanf(file, "%s %d %d %d %s %s %s %s %s %s", passengers[numPassengers].name, &passengers[numPassengers].age, &passengers[numPassengers].seatNumber, &passengers[numPassengers].busNumber, passengers[numPassengers].contactNumber, passengers[numPassengers].contactEmail, passengers[numPassengers].startingPoint, passengers[numPassengers].destination,passengers[numPassengers].bookingDateTime,passengers[numPassengers].bookedDateTime) != EOF) {
-        numPassengers++;
-    }
-    fclose(file);
-    return numPassengers;
-}*/
-
 int readPassengersFromFile(struct Passenger passengers[]) {
     FILE *file = fopen(PASSENGERS_FILE, "r");
     if (file == NULL) {
@@ -511,14 +480,6 @@ int readPassengersFromFile(struct Passenger passengers[]) {
 
 
 // Function to write passengers data to file
-/*void writePassengersToFile(struct Passenger passengers[], int numPassengers) {
-    FILE *file = fopen(PASSENGERS_FILE, "w");
-    for (int i = 0; i < numPassengers; i++) {
-        fprintf(file, "%s %d %d %d %s %s %s %s %s %s\n", passengers[i].name, passengers[i].age, passengers[i].seatNumber, passengers[i].busNumber, passengers[i].contactNumber, passengers[i].contactEmail, passengers[i].startingPoint, passengers[i].destination, passengers[i].bookingDateTime, passengers[i].bookedDateTime);
-    }
-    fclose(file);
-}*/
-
 void writePassengersToFile(struct Passenger passengers[], int numPassengers) {
     FILE *file = fopen(PASSENGERS_FILE, "w");
     for (int i = 0; i < numPassengers; i++) {
